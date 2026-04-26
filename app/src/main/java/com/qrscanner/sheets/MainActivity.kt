@@ -2,8 +2,8 @@ package com.qrscanner.sheets
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -35,31 +35,40 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        binding.btnScan.setOnClickListener { startScan() }
+        binding.cardScan.setOnClickListener { startScan() }
+
+        binding.btnSendManual.setOnClickListener { submitManualId() }
+        binding.etManualId.setOnEditorActionListener { _, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_SEND) { submitManualId(); true } else false
+        }
+
+        binding.cardTable.setOnClickListener {
+            startActivity(Intent(this, TableActivity::class.java))
+        }
+        binding.cardSettings.setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        updateSheetInfo()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+    // -------------------------------------------------------------------------
+    // Manual ID entry
+    // -------------------------------------------------------------------------
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_table -> {
-                startActivity(Intent(this, TableActivity::class.java))
-                true
-            }
-            R.id.action_settings -> {
-                startActivity(Intent(this, SettingsActivity::class.java))
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    private fun submitManualId() {
+        val id = binding.etManualId.text.toString().trim()
+        if (id.isEmpty()) {
+            Toast.makeText(this, "Please enter an ID", Toast.LENGTH_SHORT).show()
+            return
         }
+        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(binding.etManualId.windowToken, 0)
+        binding.etManualId.text?.clear()
+        val timestamp = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
+        handleScanResult(id)
     }
 
     // -------------------------------------------------------------------------
@@ -102,7 +111,6 @@ class MainActivity : AppCompatActivity() {
             db.insert(timestamp, id)
             withContext(Dispatchers.Main) {
                 binding.tvLastScan.text = "ID: $id\nTime: $timestamp"
-                binding.tvStatus.text = getString(R.string.label_ready)
                 Toast.makeText(
                     this@MainActivity,
                     getString(R.string.msg_saved_locally),
@@ -117,8 +125,7 @@ class MainActivity : AppCompatActivity() {
     // -------------------------------------------------------------------------
 
     private fun saveToSheets(timestamp: String, id: String) {
-        binding.tvStatus.text = getString(R.string.label_saving)
-        binding.btnScan.isEnabled = false
+        binding.cardScan.isEnabled = false
 
         val scriptUrl = prefs().getString("script_url", "").orEmpty()
         val sheetName = prefs().getString("sheet_name", "Sheet1").orEmpty()
@@ -128,10 +135,9 @@ class MainActivity : AppCompatActivity() {
                 SheetsHelper.appendRow(scriptUrl, sheetName, timestamp, id)
             }
 
-            binding.btnScan.isEnabled = true
+            binding.cardScan.isEnabled = true
 
             result.onSuccess {
-                binding.tvStatus.text = getString(R.string.label_ready)
                 binding.tvLastScan.text = "ID: $id\nTime: $timestamp"
                 Toast.makeText(
                     this@MainActivity,
@@ -139,7 +145,6 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }.onFailure { e ->
-                binding.tvStatus.text = "Error: ${e.message}"
                 Toast.makeText(this@MainActivity, "Failed: ${e.message}", Toast.LENGTH_LONG).show()
             }
         }
@@ -148,16 +153,6 @@ class MainActivity : AppCompatActivity() {
     // -------------------------------------------------------------------------
     // Helpers
     // -------------------------------------------------------------------------
-
-    private fun updateSheetInfo() {
-        val saveLocally = prefs().getBoolean("save_locally", false)
-        val sheetName = prefs().getString("sheet_name", "").orEmpty()
-        binding.tvSheetInfo.text = when {
-            saveLocally -> getString(R.string.label_mode_local)
-            sheetName.isEmpty() -> getString(R.string.label_not_configured)
-            else -> getString(R.string.label_sheet_active, sheetName)
-        }
-    }
 
     private fun prefs() = getSharedPreferences("prefs", MODE_PRIVATE)
 }

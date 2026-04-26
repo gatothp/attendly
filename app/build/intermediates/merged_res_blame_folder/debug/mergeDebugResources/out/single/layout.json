@@ -4,10 +4,6 @@
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\layout\\item_scan_row.xml"
     },
     {
-        "merged": "com.qrscanner.sheets.app-mergeDebugResources-34:/layout/activity_main.xml",
-        "source": "com.qrscanner.sheets.app-main-37:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-mergeDebugResources-34:\\layout\\activity_table.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\layout\\activity_table.xml"
     },
@@ -18,5 +14,9 @@
     {
         "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-mergeDebugResources-34:\\layout\\activity_main.xml",
         "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.qrscanner.sheets.app-mergeDebugResources-34:/layout/item_scan_row.xml",
+        "source": "com.qrscanner.sheets.app-main-37:/layout/item_scan_row.xml"
     }
 ]

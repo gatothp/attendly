@@ -109,6 +109,6 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_upload"
         android:layout_margin="16dp"
-        app:backgroundTint="@color/colorPrimary" />
+        style="@style/Button.YellowRounded" />
 
 </LinearLayout>

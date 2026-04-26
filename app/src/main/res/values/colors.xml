@@ -10,4 +10,7 @@
     <color name="colorSuccess">#388E3C</color>
     <color name="colorError">#D32F2F</color>
     <color name="white">#FFFFFF</color>
+    <color name="tableRowEven">#E3F2FD</color>
+    <color name="tableRowOdd">#FFFFFF</color>
+    <color name="tableDivider">#90CAF9</color>
 </resources>

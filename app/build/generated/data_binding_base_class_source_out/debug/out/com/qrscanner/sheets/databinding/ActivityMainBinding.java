@@ -11,7 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.button.MaterialButton;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.textfield.TextInputEditText;
 import com.qrscanner.sheets.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -22,7 +23,19 @@ public final class ActivityMainBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final MaterialButton btnScan;
+  public final MaterialCardView btnSendManual;
+
+  @NonNull
+  public final MaterialCardView cardScan;
+
+  @NonNull
+  public final MaterialCardView cardSettings;
+
+  @NonNull
+  public final MaterialCardView cardTable;
+
+  @NonNull
+  public final TextInputEditText etManualId;
 
   @NonNull
   public final MaterialToolbar toolbar;
@@ -30,21 +43,19 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView tvLastScan;
 
-  @NonNull
-  public final TextView tvSheetInfo;
-
-  @NonNull
-  public final TextView tvStatus;
-
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton btnScan,
-      @NonNull MaterialToolbar toolbar, @NonNull TextView tvLastScan, @NonNull TextView tvSheetInfo,
-      @NonNull TextView tvStatus) {
+  private ActivityMainBinding(@NonNull LinearLayout rootView,
+      @NonNull MaterialCardView btnSendManual, @NonNull MaterialCardView cardScan,
+      @NonNull MaterialCardView cardSettings, @NonNull MaterialCardView cardTable,
+      @NonNull TextInputEditText etManualId, @NonNull MaterialToolbar toolbar,
+      @NonNull TextView tvLastScan) {
     this.rootView = rootView;
-    this.btnScan = btnScan;
+    this.btnSendManual = btnSendManual;
+    this.cardScan = cardScan;
+    this.cardSettings = cardSettings;
+    this.cardTable = cardTable;
+    this.etManualId = etManualId;
     this.toolbar = toolbar;
     this.tvLastScan = tvLastScan;
-    this.tvSheetInfo = tvSheetInfo;
-    this.tvStatus = tvStatus;
   }
 
   @Override
@@ -74,9 +85,33 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnScan;
-      MaterialButton btnScan = ViewBindings.findChildViewById(rootView, id);
-      if (btnScan == null) {
+      id = R.id.btnSendManual;
+      MaterialCardView btnSendManual = ViewBindings.findChildViewById(rootView, id);
+      if (btnSendManual == null) {
+        break missingId;
+      }
+
+      id = R.id.cardScan;
+      MaterialCardView cardScan = ViewBindings.findChildViewById(rootView, id);
+      if (cardScan == null) {
+        break missingId;
+      }
+
+      id = R.id.cardSettings;
+      MaterialCardView cardSettings = ViewBindings.findChildViewById(rootView, id);
+      if (cardSettings == null) {
+        break missingId;
+      }
+
+      id = R.id.cardTable;
+      MaterialCardView cardTable = ViewBindings.findChildViewById(rootView, id);
+      if (cardTable == null) {
+        break missingId;
+      }
+
+      id = R.id.etManualId;
+      TextInputEditText etManualId = ViewBindings.findChildViewById(rootView, id);
+      if (etManualId == null) {
         break missingId;
       }
 
@@ -92,20 +127,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvSheetInfo;
-      TextView tvSheetInfo = ViewBindings.findChildViewById(rootView, id);
-      if (tvSheetInfo == null) {
-        break missingId;
-      }
-
-      id = R.id.tvStatus;
-      TextView tvStatus = ViewBindings.findChildViewById(rootView, id);
-      if (tvStatus == null) {
-        break missingId;
-      }
-
-      return new ActivityMainBinding((LinearLayout) rootView, btnScan, toolbar, tvLastScan,
-          tvSheetInfo, tvStatus);
+      return new ActivityMainBinding((LinearLayout) rootView, btnSendManual, cardScan, cardSettings,
+          cardTable, etManualId, toolbar, tvLastScan);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

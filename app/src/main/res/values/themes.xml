@@ -3,8 +3,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorTextPrimary</item>
         <item name="android:windowBackground">@color/colorBackground</item>
     </style>
 
     <style name="Theme.QRScanner.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Button.YellowRounded" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">#FFF8E1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">24dp</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+    </style>
 </resources>

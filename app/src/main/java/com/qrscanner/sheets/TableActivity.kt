@@ -8,7 +8,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.qrscanner.sheets.databinding.ActivityTableBinding
@@ -33,9 +32,6 @@ class TableActivity : AppCompatActivity() {
 
         adapter = ScanAdapter(records)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.addItemDecoration(
-            DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
-        )
         binding.recyclerView.adapter = adapter
 
         binding.btnUpload.setOnClickListener { uploadAll() }
@@ -130,6 +126,11 @@ class ScanAdapter(private val items: List<ScanRecord>) :
         holder.tvRowNum.text = (position + 1).toString()
         holder.tvTimestamp.text = item.timestamp
         holder.tvId.text = item.scannedId
+        val bgColor = if (position % 2 == 0)
+            holder.itemView.context.getColor(R.color.tableRowEven)
+        else
+            holder.itemView.context.getColor(R.color.tableRowOdd)
+        holder.itemView.setBackgroundColor(bgColor)
     }
 
     override fun getItemCount() = items.size

@@ -6,7 +6,8 @@
     android:paddingStart="8dp"
     android:paddingEnd="8dp"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp">
+    android:paddingBottom="8dp"
+    android:foreground="@drawable/table_row_border">
 
     <TextView
         android:id="@+id/tvRowNum"

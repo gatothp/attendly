@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">Attendly</string>
+    <string name="nav_scan">Scan</string>
+    <string name="hint_manual_id">Enter ID manually</string>
+    <string name="btn_send">Send</string>
     <string name="title_settings">Settings</string>
     <string name="title_local_records">Local Records</string>
     <string name="btn_scan">Scan QR Code</string>
     <string name="btn_settings">Settings</string>
     <string name="btn_save">Save Settings</string>
     <string name="btn_table">Table</string>
+    <string name="btn_view_local">View Local Data</string>
     <string name="btn_upload">Upload to Google Sheet</string>
     <string name="hint_script_url">Apps Script Web App URL</string>
     <string name="hint_script_url_help">Paste the Web App URL from your Google Apps Script deployment (Extensions → Apps Script → Deploy → Web App).</string>
