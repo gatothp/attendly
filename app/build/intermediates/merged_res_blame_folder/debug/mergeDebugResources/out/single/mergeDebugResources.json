@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\drawable_ic_settings_icon.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\drawable\\ic_settings_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\menu_menu_main.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\menu\\menu_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\drawable\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\layout_item_scan_row.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\layout\\item_scan_row.xml"
+    },
+    {
+        "merged": "com.qrscanner.sheets.app-debug-35:/menu_menu_main.xml.flat",
+        "source": "com.qrscanner.sheets.app-main-37:/menu/menu_main.xml"
+    },
+    {
+        "merged": "com.qrscanner.sheets.app-debug-35:/layout_activity_main.xml.flat",
+        "source": "com.qrscanner.sheets.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.qrscanner.sheets.app-debug-35:/drawable_ic_table.xml.flat",
+        "source": "com.qrscanner.sheets.app-main-37:/drawable/ic_table.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\drawable_ic_arrow_back.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\drawable\\ic_arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\layout_activity_table.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\layout\\activity_table.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-debug-35:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\User\\.gradle\\daemon\\8.13\\com.qrscanner.sheets.app-main-37:\\layout\\activity_settings.xml"
+    }
+]
