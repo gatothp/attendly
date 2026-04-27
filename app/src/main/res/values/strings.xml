@@ -34,4 +34,8 @@
     <string name="msg_saved_to_sheet">Saved to Google Sheet!</string>
     <string name="msg_saved_locally">Saved locally</string>
     <string name="msg_upload_success">All records uploaded and cleared</string>
+    <string name="btn_help">Help</string>
+    <string name="btn_info">Info</string>
+    <string name="title_help">Help</string>
+    <string name="title_info">About Attendly</string>
 </resources>

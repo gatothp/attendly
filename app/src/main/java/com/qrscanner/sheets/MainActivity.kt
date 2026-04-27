@@ -48,6 +48,12 @@ class MainActivity : AppCompatActivity() {
         binding.cardSettings.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
+        binding.cardHelp.setOnClickListener {
+            startActivity(Intent(this, HelpActivity::class.java))
+        }
+        binding.cardInfo.setOnClickListener {
+            startActivity(Intent(this, InfoActivity::class.java))
+        }
     }
 
     override fun onResume() {
