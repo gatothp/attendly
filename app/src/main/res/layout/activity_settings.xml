@@ -51,6 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_script_url"
+                app:expandedHintEnabled="false"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginBottom="12dp">
 
@@ -58,6 +59,7 @@
                     android:id="@+id/etScriptUrl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="https://script.google.com/…"
                     android:inputType="textUri"
                     android:singleLine="true"
                     android:textColor="@color/colorTextPrimary" />
@@ -70,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_sheet_name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="28dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etSheetName"
@@ -81,14 +83,6 @@
                     android:textColor="@color/colorTextPrimary" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-            <!-- Save button -->
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnSave"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/btn_save"
-                style="@style/Button.YellowRounded" />
 
             <!-- Divider -->
             <View
@@ -122,6 +116,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/label_save_locally"
+                android:textSize="14sp"
+                android:textColor="@color/colorTextPrimary" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorTextSecondary"
+                android:alpha="0.3"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Section: Dark Mode -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/section_dark_mode"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_dark_mode"
                 android:textSize="14sp"
                 android:textColor="@color/colorTextPrimary" />
 

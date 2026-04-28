@@ -86,7 +86,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="3. View Local Data"
+                        android:text="3. Local Data"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -94,7 +94,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="When Local Storage is enabled, scans are saved on the device. Open View Local Data to review all saved records and upload them to Google Sheets in bulk."
+                        android:text="When Local Storage is enabled, scans are saved on the device. Open Local Data to review all saved records and upload them to Google Sheets in bulk."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp" />
