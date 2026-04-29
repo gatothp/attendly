@@ -30,7 +30,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="How to Use Attendly"
+                android:text="Using Attendly"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
@@ -60,7 +60,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tap the Scan QR Code button on the main screen to open the camera and scan a QR code. The result is sent automatically."
+                        android:text="Tap the Scan QR Code button to read a QR code. The result is sent to Google Sheets or saved locally."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -77,7 +77,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Type an ID in the text field and tap the Send button (or press the keyboard Send key) to submit it without scanning."
+                        android:text="Type an ID or Name in the text field and tap the Send button to submit it without scanning."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -94,7 +94,23 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="When Local Storage is enabled, scans are saved on the device. Open Local Data to review all saved records and upload them to Google Sheets in bulk."
+                        android:text="When Local Storage is enabled, data is saved on the device. Open Local Data to view all saved records."
+                        android:textSize="13sp"
+                        android:textColor="@color/colorTextSecondary"
+                        android:lineSpacingExtra="2dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4. Settings"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorTextPrimary"
+                        android:layout_marginBottom="4dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Set the Apps Script URL, sheet name, data storage and dark mode view."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp" />
@@ -107,7 +123,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Configuring Google Apps Script"
+                android:text="Configuring Google"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
@@ -129,7 +145,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Step 1 — Open your Google Sheet"
+                        android:text="Step 1 — Open Google Sheet"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -137,7 +153,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Go to sheets.google.com and open (or create) the spreadsheet where attendance data should be recorded."
+                        android:text="[a] Go to sheets.google.com and create the spreadsheet which has timestamp at column A and ID at column B at headers row 1. [b] Share it in which anyone with the link can edit."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -154,7 +170,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="In your Google Sheet, click Extensions → Apps Script. This opens the script editor bound to your spreadsheet."
+                        android:text="In Google Sheet, click Extensions → Apps Script. This opens the script editor bound to your spreadsheet."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -171,7 +187,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Replace the default code with a doPost(e) function that reads the timestamp, id and sheet parameters from e.parameter and appends a row to the named sheet. Save the project (Ctrl+S)."
+                        android:text="Get script at https://s.id/gappscr and paste it in script editor. Save the project (Ctrl+S)."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -205,7 +221,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="After deployment, copy the Web App URL (starts with https://script.google.com/macros/). Paste it into the Settings screen of Attendly along with the target sheet tab name."
+                        android:text="Copy the Web App URL (starts with https://script.google.com/macros/). Paste it into the Settings screen of Attendly along with the target sheet tab name."
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp" />
