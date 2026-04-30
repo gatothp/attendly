@@ -6,14 +6,31 @@
     android:orientation="vertical"
     android:fitsSystemWindows="true">
 
-    <!-- Toolbar — title only, navigation via bottom nav -->
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
+    <!-- Centered app header — no toolbar band -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        app:title="@string/app_name"
-        app:titleTextColor="@color/white" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/colorBackground">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_app_icon"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/app_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
 
     <!-- Scrollable content -->
     <ScrollView
