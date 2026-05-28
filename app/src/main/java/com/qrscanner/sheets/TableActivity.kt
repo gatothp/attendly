@@ -1,5 +1,6 @@
 package com.qrscanner.sheets
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +22,10 @@ class TableActivity : AppCompatActivity() {
     private val db by lazy { ScanDatabase(applicationContext) }
     private val records = mutableListOf<ScanRecord>()
     private lateinit var adapter: ScanAdapter
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleHelper.wrap(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +61,7 @@ class TableActivity : AppCompatActivity() {
         binding.tvEmpty.visibility = if (empty) View.VISIBLE else View.GONE
         binding.recyclerView.visibility = if (empty) View.GONE else View.VISIBLE
         binding.btnUpload.isEnabled = !empty
-        binding.tvCount.text = if (empty) "" else "${records.size} record(s)"
+        binding.tvCount.text = if (empty) "" else getString(R.string.label_record_count, records.size)
     }
 
     private fun uploadAll() {
@@ -89,10 +94,10 @@ class TableActivity : AppCompatActivity() {
                 ).show()
             }.onFailure { e ->
                 binding.btnUpload.isEnabled = records.isNotEmpty()
-                binding.tvStatus.text = "Error: ${e.message}"
+                binding.tvStatus.text = getString(R.string.msg_error_prefix, e.message)
                 Toast.makeText(
                     this@TableActivity,
-                    "Upload failed: ${e.message}",
+                    getString(R.string.msg_upload_failed_prefix, e.message),
                     Toast.LENGTH_LONG
                 ).show()
             }

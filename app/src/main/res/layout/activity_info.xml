@@ -73,7 +73,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="About"
+                        android:text="@string/info_about_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
@@ -82,7 +82,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Attendly is a lightweight QR-code attendance tracker. Scan QR codes or enter IDs manually to record attendance directly into a Google Sheet or store records locally for bulk upload later."
+                        android:text="@string/info_about_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="3dp" />
@@ -108,7 +108,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Features"
+                        android:text="@string/info_features_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
@@ -117,7 +117,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="• QR code scanning via camera\n• Manual ID entry\n• Direct Google Sheets integration via Apps Script\n• Offline / local storage mode\n• Bulk upload from local records\n• Configurable sheet name"
+                        android:text="@string/info_features_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="4dp" />
@@ -143,7 +143,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="License"
+                        android:text="@string/info_license_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorPrimary"
@@ -152,7 +152,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="MIT License. Free to use, modify and distribute."
+                        android:text="@string/info_license_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary" />
 

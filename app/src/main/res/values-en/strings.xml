@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Attendly</string>
+    <string name="nav_scan">Scan</string>
+    <string name="hint_manual_id">Enter ID manually</string>
+    <string name="btn_send">Send</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_local_records">Local Data</string>
+    <string name="btn_scan">Scan QR Code</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_save">Save Settings</string>
+    <string name="btn_table">Table</string>
+    <string name="btn_view_local">Local Data</string>
+    <string name="btn_upload">Upload to Google Sheet</string>
+    <string name="hint_script_url">Apps Script Web App URL</string>
+    <string name="hint_script_url_help">Paste the URL of your Google Apps Script and set the sheet name.</string>
+    <string name="label_see_help">See help</string>
+    <string name="hint_sheet_name">Sheet tab name</string>
+    <string name="section_sheet_config">Sheet</string>
+    <string name="section_storage">Storage</string>
+    <string name="label_save_locally">Save data locally</string>
+    <string name="hint_save_locally_help">When enabled during low mobile signal, the data is saved on device.</string>
+    <string name="label_last_scan">Last Scan</string>
+    <string name="label_no_scans">No scans yet</string>
+    <string name="label_no_local_data">No local records</string>
+    <string name="label_ready">Ready to scan</string>
+    <string name="label_saving">Saving…</string>
+    <string name="label_uploading">Uploading…</string>
+    <string name="label_upload_done">Upload complete — records cleared</string>
+    <string name="label_not_configured">⚠ Not configured — tap ⚙ to open Settings</string>
+    <string name="label_sheet_active">Sheet: %s</string>
+    <string name="label_mode_local">Mode: Local storage — tap Table to upload</string>
+    <string name="msg_configure_sheet">Please configure the Apps Script URL in Settings</string>
+    <string name="msg_invalid_script_url">URL must start with https://script.google.com/</string>
+    <string name="msg_settings_saved">Settings saved</string>
+    <string name="msg_saved_to_sheet">Saved to Google Sheet!</string>
+    <string name="msg_saved_locally">Saved locally</string>
+    <string name="msg_upload_success">All records uploaded and cleared</string>
+    <string name="section_dark_mode">Dark Mode</string>
+    <string name="label_dark_mode">Enable dark mode</string>
+    <string name="btn_help">Help</string>
+    <string name="btn_info">Info</string>
+    <string name="title_help">Help</string>
+    <string name="title_info">Info</string>
+
+    <!-- Language settings -->
+    <string name="section_language">Language</string>
+    <string name="label_language_english">English</string>
+    <string name="label_language_indonesian">Indonesian</string>
+    <string name="label_language_current">Current language</string>
+
+    <!-- Help screen strings -->
+    <string name="help_section_using">Using Attendly</string>
+    <string name="help_step1_title">1. Scan QR Code</string>
+    <string name="help_step1_desc">Tap the Scan QR Code button to read a QR code. The result is sent to Google Sheets or saved locally.</string>
+    <string name="help_step2_title">2. Manual Entry</string>
+    <string name="help_step2_desc">Type an ID or Name in the text field and tap the Send button to submit it without scanning.</string>
+    <string name="help_step3_title">3. Local Data</string>
+    <string name="help_step3_desc">When Local Storage is enabled, data is saved on the device. Open Local Data to view all saved records.</string>
+    <string name="help_step4_title">4. Settings</string>
+    <string name="help_step4_desc">Set the Apps Script URL, sheet name, data storage and dark mode view.</string>
+    <string name="help_section_google">Configuring Google</string>
+    <string name="help_gstep1_title">Step 1 — Open Google Sheet</string>
+    <string name="help_gstep1_desc">[a] Go to sheets.google.com and create the spreadsheet which has timestamp at column A and ID at column B at headers row 1. [b] Share it in which anyone with the link can edit.</string>
+    <string name="help_gstep2_title">Step 2 — Open Apps Script</string>
+    <string name="help_gstep2_desc">In Google Sheet, click Extensions → Apps Script. This opens the script editor bound to your spreadsheet.</string>
+    <string name="help_gstep3_title">Step 3 — Paste the script</string>
+    <string name="help_gstep3_desc">Get script at https://s.id/gappscr and paste it in script editor. Save the project (Ctrl+S).</string>
+    <string name="help_gstep4_title">Step 4 — Deploy as Web App</string>
+    <string name="help_gstep4_desc">Click Deploy → New deployment. Choose Web App. Set \'Execute as\' to yourself and \'Who has access\' to Anyone. Click Deploy and authorise the app when prompted.</string>
+    <string name="help_gstep5_title">Step 5 — Copy the Web App URL</string>
+    <string name="help_gstep5_desc">Copy the Web App URL (starts with https://script.google.com/macros/). Paste it into the Settings screen of Attendly along with the target sheet tab name.</string>
+
+    <string name="label_version">Version %s</string>
+    <string name="label_last_scan_detail">ID: %1$s\nTime: %2$s</string>
+    <string name="label_record_count">%d record(s)</string>
+    <string name="msg_scan_prompt">Point camera at a QR code</string>
+    <string name="msg_enter_id">Please enter an ID first</string>
+    <string name="msg_failed_prefix">Failed: %s</string>
+    <string name="msg_upload_failed_prefix">Upload failed: %s</string>
+    <string name="msg_error_prefix">Error: %s</string>
+    <string name="info_about_title">About</string>
+    <string name="info_about_desc">Attendly is a lightweight QR-code attendance tracker. Scan QR codes or enter IDs manually to record attendance directly into a Google Sheet or store records locally for bulk upload later.</string>
+    <string name="info_features_title">Features</string>
+    <string name="info_features_desc">• QR code scanning via camera\n• Manual ID entry\n• Direct Google Sheets integration via Apps Script\n• Offline / local storage mode\n• Bulk upload from local records\n• Configurable sheet name</string>
+    <string name="info_license_title">License</string>
+    <string name="info_license_desc">MIT License. Free to use, modify and distribute.</string>
+</resources>

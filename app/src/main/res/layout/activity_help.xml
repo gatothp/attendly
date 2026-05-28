@@ -17,6 +17,7 @@
         app:navigationIconTint="@color/white" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -30,7 +31,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Using Attendly"
+                android:text="@string/help_section_using"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
@@ -52,7 +53,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="1. Scan QR Code"
+                        android:text="@string/help_step1_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -60,7 +61,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tap the Scan QR Code button to read a QR code. The result is sent to Google Sheets or saved locally."
+                        android:text="@string/help_step1_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -69,7 +70,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="2. Manual Entry"
+                        android:text="@string/help_step2_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -77,7 +78,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Type an ID or Name in the text field and tap the Send button to submit it without scanning."
+                        android:text="@string/help_step2_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -86,7 +87,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="3. Local Data"
+                        android:text="@string/help_step3_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -94,15 +95,16 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="When Local Storage is enabled, data is saved on the device. Open Local Data to view all saved records."
+                        android:text="@string/help_step3_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
-                        android:lineSpacingExtra="2dp" />
+                        android:lineSpacingExtra="2dp"
+                        android:layout_marginBottom="12dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="4. Settings"
+                        android:text="@string/help_step4_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -110,7 +112,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Set the Apps Script URL, sheet name, data storage and dark mode view."
+                        android:text="@string/help_step4_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp" />
@@ -121,9 +123,10 @@
 
             <!-- Section: Google Apps Script -->
             <TextView
+                android:id="@+id/tvSectionConfigGoogle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Configuring Google"
+                android:text="@string/help_section_google"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
@@ -145,7 +148,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Step 1 — Open Google Sheet"
+                        android:text="@string/help_gstep1_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -153,7 +156,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="[a] Go to sheets.google.com and create the spreadsheet which has timestamp at column A and ID at column B at headers row 1. [b] Share it in which anyone with the link can edit."
+                        android:text="@string/help_gstep1_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -162,7 +165,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Step 2 — Open Apps Script"
+                        android:text="@string/help_gstep2_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -170,7 +173,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="In Google Sheet, click Extensions → Apps Script. This opens the script editor bound to your spreadsheet."
+                        android:text="@string/help_gstep2_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -179,15 +182,16 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Step 3 — Paste the script"
+                        android:text="@string/help_gstep3_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
                         android:layout_marginBottom="4dp" />
                     <TextView
+                        android:id="@+id/tvHelpGstep3Desc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Get script at https://s.id/gappscr and paste it in script editor. Save the project (Ctrl+S)."
+                        android:text="@string/help_gstep3_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -196,7 +200,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Step 4 — Deploy as Web App"
+                        android:text="@string/help_gstep4_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -204,7 +208,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Click Deploy → New deployment. Choose Web App. Set \'Execute as\' to yourself and \'Who has access\' to Anyone. Click Deploy and authorise the app when prompted."
+                        android:text="@string/help_gstep4_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp"
@@ -213,7 +217,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Step 5 — Copy the Web App URL"
+                        android:text="@string/help_gstep5_title"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="@color/colorTextPrimary"
@@ -221,7 +225,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Copy the Web App URL (starts with https://script.google.com/macros/). Paste it into the Settings screen of Attendly along with the target sheet tab name."
+                        android:text="@string/help_gstep5_desc"
                         android:textSize="13sp"
                         android:textColor="@color/colorTextSecondary"
                         android:lineSpacingExtra="2dp" />

@@ -37,11 +37,11 @@
                 android:textColor="@color/colorPrimary"
                 android:layout_marginBottom="8dp" />
 
-            <!-- Help text -->
+            <!-- Help text with inline See help link -->
             <TextView
+                android:id="@+id/tvScriptUrlHelp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/hint_script_url_help"
                 android:textSize="12sp"
                 android:textColor="@color/colorTextSecondary"
                 android:layout_marginBottom="16dp" />
@@ -147,6 +147,50 @@
                 android:text="@string/label_dark_mode"
                 android:textSize="14sp"
                 android:textColor="@color/colorTextPrimary" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorTextSecondary"
+                android:alpha="0.3"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Section: Language -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/section_language"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioIndonesian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_language_indonesian"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextPrimary"
+                    android:layout_marginBottom="4dp" />
+
+                <RadioButton
+                    android:id="@+id/radioEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_language_english"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorTextPrimary" />
+
+            </RadioGroup>
 
         </LinearLayout>
     </ScrollView>
