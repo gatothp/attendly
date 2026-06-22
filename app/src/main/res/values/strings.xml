@@ -52,13 +52,15 @@
     <!-- Help screen strings -->
     <string name="help_section_using">Menggunakan Attendly</string>
     <string name="help_step1_title">1. Scan Kode QR</string>
-    <string name="help_step1_desc">Ketuk tombol Scan Kode QR untuk membaca kode QR. Hasilnya dikirim ke Google Sheets atau disimpan secara lokal.</string>
+    <string name="help_step1_desc">Ketuk tombol Scan Kode QR untuk membuka kamera dengan bingkai kotak. Arahkan kode QR ke dalam bingkai — hasilnya dikirim ke Google Sheets atau disimpan secara lokal.\n\nTahan tombol Scan untuk membuka galeri dan memilih gambar yang berisi kode QR dari penyimpanan perangkat.</string>
     <string name="help_step2_title">2. Entri Manual</string>
     <string name="help_step2_desc">Ketik ID atau Nama di kolom teks dan ketuk tombol Kirim untuk mengirimnya tanpa scan.</string>
-    <string name="help_step3_title">3. Data Lokal</string>
-    <string name="help_step3_desc">Saat Penyimpanan Lokal diaktifkan, data disimpan di perangkat. Buka Data Lokal untuk melihat semua catatan tersimpan.</string>
-    <string name="help_step4_title">4. Pengaturan</string>
-    <string name="help_step4_desc">Atur URL Apps Script, nama sheet, penyimpanan data, dan tampilan mode gelap.</string>
+    <string name="help_step3_title">3. Nomor Scan</string>
+    <string name="help_step3_desc">Setiap scan diberi nomor urut otomatis — Scan #1, Scan #2, dst. Nomor ini ditampilkan di bagian Scan Terakhir di halaman utama. Untuk mereset penomoran ke 0, buka Pengaturan dan ketuk tombol Reset Nomor Scan.</string>
+    <string name="help_step4_title">4. Data Lokal</string>
+    <string name="help_step4_desc">Saat Penyimpanan Lokal diaktifkan, data disimpan di perangkat. Buka Data Lokal untuk melihat semua catatan tersimpan.</string>
+    <string name="help_step5_title">5. Pengaturan</string>
+    <string name="help_step5_desc">Atur URL Apps Script, nama sheet, penyimpanan data, reset nomor scan, dan tampilan mode gelap.</string>
     <string name="help_section_google">Konfigurasi Google</string>
     <string name="help_gstep1_title">Langkah 1 — Buka Google Sheet</string>
     <string name="help_gstep1_desc">[a] Buka sheets.google.com dan buat spreadsheet dengan timestamp di kolom A dan ID di kolom B pada baris header 1. [b] Bagikan agar siapa pun dengan tautan dapat mengedit.</string>
@@ -79,10 +81,18 @@
     <string name="msg_failed_prefix">Gagal: %s</string>
     <string name="msg_upload_failed_prefix">Gagal mengunggah: %s</string>
     <string name="msg_error_prefix">Error: %s</string>
+    <string name="msg_no_qr_found">Tidak ada kode QR yang ditemukan di gambar</string>
+    <string name="msg_gallery_permission_denied">Izin galeri diperlukan untuk membaca gambar</string>
+    <string name="btn_scan_hint">Tahan untuk pilih dari galeri</string>
+    <string name="label_scan_number">Scan #%d</string>
+    <string name="section_scan_counter">Nomor Scan</string>
+    <string name="label_scan_counter_current">Scan saat ini: #%d</string>
+    <string name="btn_reset_counter">Reset Nomor Scan</string>
+    <string name="msg_counter_reset">Nomor scan direset ke 0</string>
     <string name="info_about_title">Tentang</string>
     <string name="info_about_desc">Attendly adalah aplikasi pencatat kehadiran berbasis kode QR yang ringan. Scan kode QR atau masukkan ID secara manual untuk mencatat kehadiran langsung ke Google Sheet atau simpan catatan secara lokal untuk diunggah sekaligus nanti.</string>
     <string name="info_features_title">Fitur</string>
-    <string name="info_features_desc">• Pemindaian kode QR via kamera\n• Entri ID manual\n• Integrasi langsung dengan Google Sheets via Apps Script\n• Mode offline / penyimpanan lokal\n• Unggah massal dari catatan lokal\n• Nama sheet yang dapat dikonfigurasi</string>
+    <string name="info_features_desc">• Pemindaian kode QR via kamera atau file lokal\n• Entri ID manual\n• Integrasi langsung dengan Google Sheets via Apps Script\n• Mode offline / penyimpanan lokal\n• Unggah massal dari catatan lokal\n• Nama sheet yang dapat dikonfigurasi</string>
     <string name="info_license_title">Lisensi</string>
     <string name="info_license_desc">Lisensi MIT. Bebas digunakan, dimodifikasi, dan didistribusikan.</string>
 </resources>

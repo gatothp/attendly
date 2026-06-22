@@ -1,6 +1,6 @@
 # 📋 Attendly
 
-**Version 1.1.0** — An Android app (API 24+) for meeting attendance. The host scans participants' QR codes; each scan appends a row to a Google Sheet instantly — **no Google Cloud Console, no OAuth, no sign-in required**.
+**Version 1.1.1** — An Android app (API 24+) for meeting attendance. The host scans participants' QR codes; each scan appends a row to a Google Sheet instantly — **no Google Cloud Console, no OAuth, no sign-in required**.
 
 Scan records are also **saved locally on the device**, so attendance data is preserved even without an internet connection.
 
@@ -12,9 +12,11 @@ Scan records are also **saved locally on the device**, so attendance data is pre
 
 ## ✨ Features
 
-- 📷 Scan QR codes via camera or enter IDs manually
+- 📷 Scan QR codes via camera (square viewfinder) or pick from device gallery
+- ✍️ Enter IDs manually
 - 📊 Direct Google Sheets integration via Apps Script — no backend, no API keys
 - 📦 Offline / local storage mode with bulk upload
+- 🔢 Automatic scan numbering (Scan #1, #2…) with reset option in Settings
 - 🌐 Bilingual UI — **Indonesian** (default) and **English**, switchable in Settings
 - 🌙 Dark mode support
 - 🔀 Configurable sheet tab name — switch events without redeploying
@@ -115,6 +117,7 @@ The app restarts automatically to apply the change.
 | Library | Version | Purpose |
 |---------|---------|---------|
 | `zxing-android-embedded` | 4.3.0 | QR code camera scanner |
+| `mlkit:barcode-scanning` | 17.3.0 | QR decode from gallery image |
 | `okhttp3` | 4.12.0 | HTTP POST to Apps Script |
 | `kotlinx-coroutines-android` | 1.7.3 | Background threading |
 | `androidx.recyclerview` | 1.3.2 | Local records table view |
@@ -126,7 +129,14 @@ The app restarts automatically to apply the change.
 
 ## 📝 Changelog
 
-### 🆕 1.1.0
+### 🆕 1.1.1
+- 📷 **Square viewfinder** — camera scanner now uses a square framing box
+- 🖼️ **Gallery QR picker** — long-press the Scan button to decode a QR code from a local image file
+- 🔢 **Scan numbering** — every scan is labelled Scan #1, Scan #2… on the main screen
+- ⚙️ **Reset scan number** — new button in Settings → Nomor Scan resets the counter to 0
+- 🛠️ Gradle deprecation warnings resolved (Gradle 10 compatibility)
+
+### 1.1.0
 - 🌐 Bilingual support: Indonesian (default) + English, switchable in Settings
 - 🔗 "See help" inline link in Settings → Sheet section
 - 🔗 Clickable URL in Help → Step 3

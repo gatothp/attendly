@@ -79,6 +79,14 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
+        // Scan counter section
+        refreshCounterDisplay()
+        binding.btnResetCounter.setOnClickListener {
+            prefs.edit().putInt("scan_counter", 0).apply()
+            refreshCounterDisplay()
+            Toast.makeText(this, getString(R.string.msg_counter_reset), Toast.LENGTH_SHORT).show()
+        }
+
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 saveAndFinish()
@@ -144,5 +152,10 @@ class SettingsActivity : AppCompatActivity() {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
         startActivity(intent)
         finish()
+    }
+
+    private fun refreshCounterDisplay() {
+        val count = prefs.getInt("scan_counter", 0)
+        binding.tvScanCounterValue.text = getString(R.string.label_scan_counter_current, count)
     }
 }

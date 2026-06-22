@@ -54,7 +54,7 @@
                 android:id="@+id/cardScan"
                 android:layout_width="220dp"
                 android:layout_height="220dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="4dp"
                 android:clickable="true"
                 android:focusable="true"
                 app:cardElevation="8dp"
@@ -88,6 +88,15 @@
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
+
+            <!-- Gallery hint below scan card -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_scan_hint"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp" />
 
             <!-- Manual ID entry row -->
             <LinearLayout
@@ -344,6 +353,7 @@
                     android:padding="16dp">
 
                     <TextView
+                        android:id="@+id/tvLastScanLabel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/label_last_scan"

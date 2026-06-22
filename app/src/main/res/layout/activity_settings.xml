@@ -130,6 +130,42 @@
                 android:layout_marginTop="28dp"
                 android:layout_marginBottom="20dp" />
 
+            <!-- Section: Scan Counter -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/section_scan_counter"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvScanCounterValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_reset_counter"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/colorPrimary"
+                android:textColor="@color/colorPrimary" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorTextSecondary"
+                android:alpha="0.3"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="20dp" />
+
             <!-- Section: Dark Mode -->
             <TextView
                 android:layout_width="match_parent"
