@@ -1,6 +1,6 @@
 # 📋 Attendly
 
-**Version 1.1.1** — An Android app (API 24+) for meeting attendance. The host scans participants' QR codes; each scan appends a row to a Google Sheet instantly — **no Google Cloud Console, no OAuth, no sign-in required**.
+**Version 1.2** — An Android app (API 24+) for meeting attendance. The host scans participants' QR codes; each scan appends a row to a Google Sheet instantly — **no Google Cloud Console, no OAuth, no sign-in required**.
 
 Scan records are also **saved locally on the device**, so attendance data is preserved even without an internet connection.
 

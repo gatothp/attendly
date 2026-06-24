@@ -65,7 +65,7 @@
     <string name="help_gstep1_title">Langkah 1 — Buka Google Sheet</string>
     <string name="help_gstep1_desc">[a] Buka sheets.google.com dan buat spreadsheet dengan timestamp di kolom A dan ID di kolom B pada baris header 1. [b] Bagikan agar siapa pun dengan tautan dapat mengedit.</string>
     <string name="help_gstep2_title">Langkah 2 — Buka Apps Script</string>
-    <string name="help_gstep2_desc">Di Google Sheet, klik Ekstensi → Apps Script. Ini membuka editor skrip yang terhubung ke spreadsheet Anda.</string>
+    <string name="help_gstep2_desc">Di Google Sheet, klik Ekstensi → Apps Script. Ini membuka editor skrip yang terhubung ke spreadsheet anda. Hapus isi skrip yang ada.</string>
     <string name="help_gstep3_title">Langkah 3 — Paste skrip</string>
     <string name="help_gstep3_desc">Dapatkan skrip di https://s.id/gappscr dan paste di editor skrip. Simpan proyek (Ctrl+S).</string>
     <string name="help_gstep4_title">Langkah 4 — Deploy sebagai Web App</string>

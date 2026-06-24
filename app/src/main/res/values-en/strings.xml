@@ -65,7 +65,7 @@
     <string name="help_gstep1_title">Step 1 — Open Google Sheet</string>
     <string name="help_gstep1_desc">[a] Go to sheets.google.com and create the spreadsheet which has timestamp at column A and ID at column B at headers row 1. [b] Share it in which anyone with the link can edit.</string>
     <string name="help_gstep2_title">Step 2 — Open Apps Script</string>
-    <string name="help_gstep2_desc">In Google Sheet, click Extensions → Apps Script. This opens the script editor bound to your spreadsheet.</string>
+    <string name="help_gstep2_desc">In Google Sheet, click Extensions → Apps Script. This opens the script editor bound to your spreadsheet. Delete existing script content.</string>
     <string name="help_gstep3_title">Step 3 — Paste the script</string>
     <string name="help_gstep3_desc">Get script at https://s.id/gappscr and paste it in script editor. Save the project (Ctrl+S).</string>
     <string name="help_gstep4_title">Step 4 — Deploy as Web App</string>
